@@ -7,6 +7,8 @@
 - 局域网单挑（`server.py`）与房间码联机（WebRTC）
 - 整包只有 MIT / CC0 素材，没有任何没有授权的模型
 
+![VANTAGE](screenshot.jpg)
+
 ## 直接玩
 
 - 下载本仓库的 `index.html`，双击用浏览器打开（不需要服务器，也不需要联网）。
