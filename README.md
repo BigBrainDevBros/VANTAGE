@@ -14,7 +14,7 @@ A browser first-person shooter that ships as one static HTML file. No build step
 
 - **Offline:** download `index.html` and open it in a browser. That is all it takes.
 - **Online:** <https://bigbraindevbros.github.io/VANTAGE/> — the same file, served by GitHub Pages.
-- **Language:** the UI defaults to English. Settings → Language switches to 中文.
+- **Language:** English and Chinese are both available (Settings → Language).
 
 ## Controls
 
@@ -55,7 +55,7 @@ Everything in this build is MIT or CC0:
 | Katana model | CC0 1.0 (3dassets.dev) |
 | Maps, textures, UI, AI, netcode, block models, half the sound effects | Original |
 
-See [CREDITS.md](CREDITS.md) for details. Weapon numbers are tuned against the Krunker wiki and DustIII tables; the code is original.
+See [CREDITS.md](CREDITS.md) for details. Weapon numbers were tuned for this game; the code is original.
 
 ## About this repo
 

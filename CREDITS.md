@@ -25,12 +25,6 @@ Repository: https://github.com/TeamForbiddenLLC/warfork-free-soundpacks
   their license texts are in the official repository.
 - All other game logic was written for this project.
 
-## References (ideas only, no code copied)
-
-- Krunker official wiki weapon tables
-- DustIII (browser Counter-Strike) knife numbers and swing curves
-- Aiming and game-feel conventions from CS:GO, VALORANT and Delta Force
-
 ## 3D models (models/)
 
 ### First-person guns and soldier: removed (2026-11-25)
