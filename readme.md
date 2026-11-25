@@ -91,6 +91,10 @@ Open `index.html` in a desktop browser for an offline smoke test. Confirm that t
 
 Run `python3 scripts/check-repository.py` to check the tracked files. Add `--fix` to restore missing final newlines and correct link casing when the tracked target is unambiguous. Run the check again to verify the result. GitHub Actions checks branch pushes and appends a bot commit only when there are safe changes and the branch still points at that push. It reports issues such as invalid commit subjects, unsafe paths, and binary links for contributors to review.
 
+## Thanks
+
+Thanks to **Even** ([@AMFI-Disable](https://github.com/AMFI-Disable)), founder of BigBrainDevBros, for setting this repository up properly: the README layout and badges, the lower-case file naming, the issue and pull request templates, the license and security policy, the changelog and `.gitignore`, and the compliance workflow with `scripts/check-repository.py` that keeps links, file names and commit subjects tidy.
+
 ---
 
 © 2026 hilbertqiu
