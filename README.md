@@ -57,6 +57,11 @@ Everything in this build is MIT or CC0:
 
 See [CREDITS.md](CREDITS.md) for details. Weapon numbers were tuned for this game; the code is original.
 
+## Authors
+
+Built by **@hilbertqiu** together with an AI coding assistant.
+Ideas, design direction and playtesting are human; code, tooling and documentation were written jointly.
+
 ## About this repo
 
 `index.html` is the single-file build output. The source lives outside this repo; this is the distribution build.
