@@ -10,7 +10,7 @@
 ## 直接玩
 
 - 下载本仓库的 `index.html`，双击用浏览器打开（不需要服务器，也不需要联网）。
-- 或者在线的单文件版：启用 GitHub Pages 后就是 <https://bigbraindevbros.github.io/VANTAGE/>。
+- 或者直接在浏览器里玩：<https://bigbraindevbros.github.io/VANTAGE/>（GitHub Pages，和仓库里的 `index.html` 是同一份文件）。
 
 ## 操作
 
