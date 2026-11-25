@@ -1,0 +1,79 @@
+name: Repository Compliance
+
+on:
+  push:
+    branches: ['**']
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event.deleted == false
+    steps:
+      - name: Check Out The Pushed Commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+
+      - name: Determine The Commit Range
+        id: range
+        env:
+          BEFORE: ${{ github.event.before }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          base="$BEFORE"
+          if [[ "$base" =~ ^0+$ ]]; then
+            if [[ "$GITHUB_REF" == "refs/heads/$DEFAULT_BRANCH" ]]; then
+              base=dfe43cd00cd97361a7d87be4a3302ff4d88c8482
+            else
+              base="refs/remotes/origin/$DEFAULT_BRANCH"
+            fi
+          elif ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            git fetch --no-tags origin "$base"
+          fi
+          printf 'base=%s\n' "$base" >> "$GITHUB_OUTPUT"
+
+      - name: Repair Safe Markdown Issues
+        run: python3 scripts/check-repository.py --fix
+
+      - name: Publish Repairs If The Branch Is Unchanged
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            exit 0
+          fi
+          current=$(git ls-remote --refs origin "$GITHUB_REF" | cut -f1)
+          if [[ "$current" != "$GITHUB_SHA" ]]; then
+            echo "Branch advanced or was deleted. Skipping repairs for this push."
+            exit 0
+          fi
+          git add -u -- '*.md'
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git diff --cached --check
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'docs: repair markdown compliance'
+          test "$(git rev-parse HEAD^)" = "$GITHUB_SHA"
+          if ! git push --force-with-lease="$GITHUB_REF:$GITHUB_SHA" origin "HEAD:$GITHUB_REF"; then
+            current=$(git ls-remote --refs origin "$GITHUB_REF" | cut -f1)
+            if [[ "$current" == "$GITHUB_SHA" ]]; then
+              echo "GitHub rejected the repair commit for the current branch." >&2
+              exit 1
+            fi
+            echo "Branch changed while publishing. Leaving its commits intact."
+          fi
+
+      - name: Check Files And New Commit Subjects
+        if: ${{ !cancelled() }}
+        env:
+          BASE: ${{ steps.range.outputs.base }}
+        run: |
+          test -n "$BASE"
+          python3 scripts/check-repository.py --base "$BASE"

@@ -1,6 +1,18 @@
+<div align="center">
+
 # VANTAGE
 
-A browser first-person shooter that ships as one static HTML file. No build step, no server, works offline.
+**A Single-File Browser FPS With A Procedural City**
+
+![Platform](https://img.shields.io/badge/Platform-Web%20Browser-blue?style=flat-square)
+![Build](https://img.shields.io/badge/Build-Single%20HTML-informational?style=flat-square)
+![Languages](https://img.shields.io/badge/Languages-English%20%2F%20Chinese-informational?style=flat-square)
+
+[Play Online](https://bigbraindevbros.github.io/VANTAGE/) · [Changelog](changelog.md) · [Security Policy](security.md) · [License Notices](license) · [Credits](credits.md)
+
+</div>
+
+## Key Features
 
 - A walled 3×3 / 4×4 / 5×5 arena (150 / 200 / 250 m on the default preset) inside an endless procedural city that streams in around the player
 - Up to 100 bots with flow-field pathfinding; endless solo mode
@@ -31,20 +43,20 @@ A browser first-person shooter that ships as one static HTML file. No build step
 
 Pick a map and a size on the home screen. "Start game" is endless solo; "Create / join room" is multiplayer.
 
-## What is in it
+## Gameplay And Engine
 
 - **City:** a block grid with 14 m streets, generated at startup — courtyard blocks, towers, a freight yard, a plaza. You pick a 3×3, 4×4 or 5×5 walled arena on the home screen; beyond the wall the city continues and streams in around the player (visual only, no collision). Fire escapes lead to the roofs, and bots will climb them to follow you.
 - **Bots:** a 1 m navigation grid plus one flow field (BFS) shared by every bot, so they path around blocks and through alleys instead of sliding along walls. When you stand on a roof, their target becomes that building's fire-escape landing.
 - **Collision, raycasts, hit detection:** all against the axis-aligned boxes created by `addBox`, accelerated with an 8 m spatial hash. Bullets use a 2D DDA plus slab test against those boxes.
-- **Multiplayer:** 1v1 first-to-N, or co-op against bots. LAN through `server.py`, or room codes over WebRTC (PeerJS only exchanges SDP). Client-authoritative, no anti-cheat; play with friends.
+- **Multiplayer:** 1v1 first-to-N, or co-op against bots. Room codes use WebRTC signaling through PeerJS. LAN mode requires a separate `server.py` that is outside this distribution. Client-authoritative, no anti-cheat; play with friends.
 
 ## Tech
 
 Three.js r170 for rendering, WebAudio for sound, PeerJS for WebRTC. Everything is bundled into a single HTML file: engine, game code, models (base64) and sounds. The city, textures, UI, AI, netcode and the block-built weapons and characters were written for this project.
 
-## Assets and licenses
+## Assets And Licenses
 
-Everything in this build is MIT or CC0:
+Bundled assets and dependencies carry their own licenses. Original project work is credited below.
 
 | Asset | License |
 |---|---|
@@ -55,16 +67,18 @@ Everything in this build is MIT or CC0:
 | Katana model | CC0 1.0 (3dassets.dev) |
 | Maps, textures, UI, AI, netcode, block models, half the sound effects | Original |
 
-See [CREDITS.md](CREDITS.md) for details. Weapon numbers were tuned for this game; the code is original.
+See [Credits](credits.md) for details. Weapon numbers were tuned for this game; the code is original.
 
 ## Authors
 
 Built by **@hilbertqiu** together with an AI coding assistant.
 Ideas, design direction and playtesting are human; code, tooling and documentation were written jointly.
 
-## About this repo
+## Development
 
-`index.html` is the single-file build output. The source lives outside this repo; this is the distribution build.
+Open `index.html` in a desktop browser for an offline smoke test. Confirm that the menu loads and that a solo match starts. Room-code multiplayer requires network access. The editable game source lives outside this distribution repository.
+
+Run `python3 scripts/check-repository.py` to check the tracked files. Add `--fix` to restore missing final newlines and correct link casing when the tracked target is unambiguous. Run the check again to verify the result. GitHub Actions checks branch pushes and appends a bot commit only when there are safe changes and the branch still points at that push. It reports issues such as invalid commit subjects, unsafe paths, and binary links for contributors to review.
 
 ---
 

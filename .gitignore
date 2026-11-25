@@ -1,0 +1,54 @@
+# ==============================================================================
+# SECTION 1: WORKING & PRESERVED FILES (Explicit Whitelists)
+# ==============================================================================
+!index.html
+!screenshot.jpg
+!credits.md
+!scripts/
+!sources/
+!src/
+!readme*.md
+!changelog.md
+!security.md
+!license
+!.gitignore
+!.github/
+
+# ==============================================================================
+# SECTION 2: HIDDEN & IGNORED ARTIFACTS
+# ==============================================================================
+# 2.1 System Metadata
+.DS_Store
+._*
+Thumbs.db
+
+# 2.2 IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.xcuserdatad/
+xcuserdata/
+*.xcuserstate
+
+# 2.3 Build Products, Caches & Output Directories
+build/
+dist/
+DerivedData/
+.build/
+*.pyc
+__pycache__/
+*.egg-info/
+node_modules/
+
+# 2.4 Secrets, Environment Profiles & Diagnostics
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.log
+scratch/
+tmp/
+.local/
