@@ -7,11 +7,11 @@ labels: bug
 
 <!-- Chinese or English, either is fine. The in-game "Report a bug" button (Settings) fills in the block at the bottom. -->
 
-## What happened / 发生了什么
+## What Happened / 发生了什么
 
 <!-- One or two sentences: where, what you were doing, what went wrong. -->
 
-## Steps to reproduce / 怎么复现
+## Steps To Reproduce / 怎么复现
 
 1.
 2.
@@ -19,7 +19,7 @@ labels: bug
 
 ## Expected / 期望的结果
 
-## Build info / 版本信息
+## Build Info / 版本信息
 
 ```
 version:        <!-- e.g. ?v=209 -->
