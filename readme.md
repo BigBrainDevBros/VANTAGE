@@ -91,6 +91,14 @@ Open `index.html` in a desktop browser for an offline smoke test. Confirm that t
 
 Run `python3 scripts/check-repository.py` to check the tracked files. Add `--fix` to restore missing final newlines and correct link casing when the tracked target is unambiguous. Run the check again to verify the result. GitHub Actions checks branch pushes and appends a bot commit only when there are safe changes and the branch still points at that push. It reports issues such as invalid commit subjects, unsafe paths, and binary links for contributors to review.
 
+## Contributing
+
+Commit subjects follow one shape: `type: three lowercase words`, for example `docs: add thanks section`.
+The type is a short lowercase word such as `feat`, `fix`, `docs` or `ci`.
+`scripts/check-repository.py` checks the tracked Markdown (code fences, heading case, link casing, trailing newlines)
+and the subjects of new commits; the `Repository Compliance` workflow runs the same check on every push and
+repairs safe Markdown issues when the branch has not moved.
+
 ## Thanks
 
 Thanks to **Even** ([@AMFI-Disable](https://github.com/AMFI-Disable)), founder of BigBrainDevBros, for setting this repository up properly: the README layout and badges, the lower-case file naming, the issue and pull request templates, the license and security policy, the changelog and `.gitignore`, and the compliance workflow with `scripts/check-repository.py` that keeps links, file names and commit subjects tidy.
