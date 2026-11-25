@@ -1,88 +1,95 @@
-# 素材来源
+# Credits and asset licenses
 
-## 音效（sfx/）
+## Sound effects (sfx/)
 
-全部来自 **TeamForbiddenLLC/warfork-free-soundpacks** 的 `cc0/` 目录，**CC0 1.0（公共领域）**，可自由使用、修改、商用，无需署名。这里仍然列出以表尊重。
+All from the **TeamForbiddenLLC/warfork-free-soundpacks** `cc0/` folder, **CC0 1.0 (public domain)**:
+free to use, modify and sell, no attribution required. Listed here anyway, out of respect.
 
-| 文件 | 用途 |
+| File | Used for |
 |---|---|
-| machinegun_fire.ogg | 冲锋枪开火 |
-| instagun_strong.ogg | 狙击枪开火 |
-| bladegun_strong_fire.ogg | 手枪开火 |
-| blade_strike1/2.ogg | 挥刀（随机二选一） |
-| blade_hitflsh1.ogg | 刀砍中人 |
-| weapon_noammo.ogg | 空仓 |
-| weapon_switch.ogg | 切枪 |
+| machinegun_fire.ogg | SMG fire |
+| instagun_strong.ogg | Sniper fire |
+| bladegun_strong_fire.ogg | Pistol fire |
+| blade_strike1/2.ogg | Melee swing (picked at random) |
+| blade_hitflsh1.ogg | Melee hit |
+| weapon_noammo.ogg | Dry fire |
+| weapon_switch.ogg | Weapon switch |
 
-仓库：https://github.com/TeamForbiddenLLC/warfork-free-soundpacks
+Repository: https://github.com/TeamForbiddenLLC/warfork-free-soundpacks
 
-## 代码
+## Code
 
-- Three.js r170（vendor/three/，本地化，MIT）
-- PeerJS 1.5.4（vendor/peerjs/peerjs.min.js，MIT，https://peerjs.com）—— 联机单挑的 WebRTC 信令与数据通道；
-  它自己打包了 eventemitter3 / peerjs-js-binarypack / webrtc-adapter / sdp，许可证全文见官方仓库
-- 其余游戏逻辑为本项目自写
+- Three.js r170 (`vendor/three/`, vendored locally, MIT)
+- PeerJS 1.5.4 (`vendor/peerjs/peerjs.min.js`, MIT, https://peerjs.com) — WebRTC signaling and data channel
+  for room-code multiplayer. It bundles eventemitter3 / peerjs-js-binarypack / webrtc-adapter / sdp;
+  their license texts are in the official repository.
+- All other game logic was written for this project.
 
-## 参考（只看了思路，没抄代码）
+## References (ideas only, no code copied)
 
-- Krunker 官方 wiki 的武器数值表
-- DustIII（浏览器版 CS）的刀数值与挥砍曲线
-- CS:GO / VALORANT / 三角洲行动的瞄具与手感常识
+- Krunker official wiki weapon tables
+- DustIII (browser Counter-Strike) knife numbers and swing curves
+- Aiming and game-feel conventions from CS:GO, VALORANT and Delta Force
 
-## 3D 模型（models/）
+## 3D models (models/)
 
-### 第一人称枪模与士兵：已删除（2026-11-25）
+### First-person guns and soldier: removed (2026-11-25)
 
-原来这里放着 GitHub **cktang88/3d-fps** 的 mp5a5.glb / vss.glb / m1911.glb / soldier.glb。
-那个仓库**没有 LICENSE**（GitHub API 返回 `license: null`，等于保留所有权利），不能随包发。
-2026-11-25 按要求把四个文件全部删除，连带同来源的 `assets_unused/scarl.glb`。
+This folder used to contain **cktang88/3d-fps** `mp5a5.glb`, `vss.glb`, `m1911.glb` and `soldier.glb`.
+That repository has **no LICENSE** (GitHub reports `license: null`, i.e. all rights reserved),
+so they could not be redistributed. All four were deleted on 2026-11-25, along with
+`assets_unused/scarl.glb` from the same source.
 
-现在枪、玩家身体、人机身体、大部分近战道具都是 `js/main.js` 里用方块现搭的
-（`buildVM` / `makeBlockBody` / `makeBot`），**不依赖任何外部模型文件**。
+Guns, the player body, bots and most melee props are now built out of boxes in `js/main.js`
+(`buildVM` / `makeBlockBody` / `makeBot`); the game does **not depend on any external model file**.
 
-以后要换回真模型：只接受 **MIT / CC0 / 有明确书面授权** 的文件，
-按原路径放回 `models/mp5a5.glb`、`models/vss.glb`、`models/m1911.glb`、`models/soldier.glb`，
-再把 `js/main.js` 里的 `GLB_ART` 改成 `true`。换之前先更新本文件和 ASSET_REPORT.md。
+To bring real models back: only accept **MIT / CC0 / explicitly licensed** files, put them back at
+`models/mp5a5.glb`, `models/vss.glb`, `models/m1911.glb` and `models/soldier.glb`,
+then set `GLB_ART = true` in `js/main.js`. Update this file and ASSET_REPORT.md first.
 
-grapple（钩索枪）本来就是方块搭的。
+The grappling hook was always built out of boxes.
 
-### 场景道具（models/props/）
+### Props (models/props/)
 
-全部是 **Kenney** 的 CC0 模型（公共领域，可商用、可修改、无需署名），
-通过 **Hidencod/tge-assets** 的 GLB 整理版下载（原包为 Kenney 的 3D kits）：
+All **Kenney** CC0 models (public domain; commercial use, modification and redistribution allowed,
+no attribution required), downloaded as GLB conversions from **Hidencod/tge-assets**:
 
-| 文件 | 来源包 | 用途 |
+| File | Source kit | Use |
 |---|---|---|
-| building-a / building-c / building-skyscraper-a / low-detail-building-a | city-kit-commercial | ~~围墙外的城市天际线~~ 已不用（v4 换成程序化远景楼群），文件移到 `assets_unused/`，不打包进单文件 |
-| brick-wall | graveyard-kit | ~~场内矮墙~~ 旧地图用的，v4 城市地图不再摆放 |
-| crate | prototype-kit | 旧地图叠箱（v4 不再使用，Props 表里保留以便以后摆） |
-| barrel | platformer-kit | 场地摆件 |
-| dumpster / construction-barrier / construction-cone | city-kit-roads | 场地摆件（v4 备用） |
-| tree-large / tree-small | castle-kit | 街角行道树 + 墙外树冠 |
-| rock-largea / rock-smalla / plant-bushlarge / grass | nature-kit | 角落点缀 |
+| building-a / building-c / building-skyscraper-a / low-detail-building-a | city-kit-commercial | ~~distant skyline~~ no longer used (v4 generates the skyline procedurally); moved to `assets_unused/`, not bundled |
+| brick-wall | graveyard-kit | ~~low walls~~ only used by the old map; not placed in the v4 city |
+| crate | prototype-kit | old map crates (unused in v4, kept in the prop table) |
+| barrel | platformer-kit | street prop |
+| dumpster / construction-barrier / construction-cone | city-kit-roads | street props (v4 spare) |
+| tree-large / tree-small | castle-kit | street trees and trees outside the walls |
+| rock-largea / rock-smalla / plant-bushlarge / grass | nature-kit | corner decoration |
 
-整理仓库：https://github.com/Hidencod/tge-assets
-原始作者：https://kenney.nl（CC0 1.0）
+Conversion repository: https://github.com/Hidencod/tge-assets
+Original author: https://kenney.nl (CC0 1.0)
 
-### 刀（models/knives/）
+### Knife (models/knives/)
 
-| 文件 | 名称 | 来源 | 授权 |
+| File | Name | Source | License |
 |---|---|---|---|
-| katana.glb | 武士刀（圆镡、缠绳柄、带弧度刀身；刀尖 +Z，全长 1.047 m） | 3dassets.dev「Swords, Shields and Melee Arms — Katana」<br>https://3dassets.dev/assets/swords-shields-and-melee-arms-katana-dc914408 | **CC0 1.0**（该包标注由 AI 生成，作者 3D Assets） |
+| katana.glb | Katana (round tsuba, wrapped handle, curved blade; tip at +Z, 1.047 m long) | 3dassets.dev "Swords, Shields and Melee Arms — Katana"<br>https://3dassets.dev/assets/swords-shields-and-melee-arms-katana-dc914408 | **CC0 1.0** (the pack is marked AI-generated, author 3D Assets) |
 
-（11-24 深夜：蝴蝶刀 balisong.glb 和猎刀 hunting.glb 已经删掉，连带它们那两套开合 / 摆位代码。
-近战槽现在是「拳头（内置方块手）」和「武士刀」两种。）
+(The balisong and hunting knife models, plus their open/close and placement code, were removed on
+2026-11-24. The melee slot now has two choices: fists (built-in box hand) and katana.)
 
-武士刀是静态模型（没有骨骼和动画）。游戏里的检视动作是程序驱动的旋转。
-武士刀用 KHR_mesh_quantization（three r170 原生支持），材质没有贴图，靠 knifeEnv 那张环境贴图出金属感。
+The katana is a static mesh (no skeleton or animation); the inspect animation is a scripted rotation.
+It uses KHR_mesh_quantization (native in three r170) and has no textures; the metal look comes from
+the environment map baked into `knifeEnv`.
 
-道具只负责外观：碰撞、寻路、命中判定仍然走原来 addBox 生成的方块，模型加载失败时自动回落到方块。
+Props are visual only: collision, pathfinding and hit detection still use the boxes created by `addBox`,
+and everything falls back to boxes if a model fails to load.
 
-## 大地图（v4，200 米街区城市）
+## City map (v4, 200 m block city)
 
-整张地图是**代码生成的**（`js/main.js` 里「大地图：程序化街区城市」那一段），
-不包含任何外部地图文件：建筑体块、街道、地面贴图、窗户 / 幕墙 / 店面 / 瓦楞板纹理
-全部是运行时用 canvas 画出来或者直接生成的几何体。因此没有第三方地图授权问题。
+The whole map is **generated in code** (the "大地图：程序化街区城市" section of `js/main.js`).
+There is no external map file: building volumes, streets, the ground texture and the window / curtain-wall /
+storefront / corrugated textures are all painted on canvas or built as geometry at runtime.
+So there is no third-party map license involved.
 
-试过但**没有采用**、也没有把文件留在仓库里的：Khronos glTF 样例 VirtualCity（3DRT，仅测试授权，
-而且是个带穹顶的广场不是关卡）、Sponza（CryEngine 协议，45 MB）。
+Tried but **not used**, and no files kept in the repo: the Khronos glTF sample VirtualCity
+(3DRT, evaluation-only license, and it is a dome-covered plaza rather than a level) and Sponza
+(CryEngine license, 45 MB).

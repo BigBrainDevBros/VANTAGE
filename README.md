@@ -14,6 +14,7 @@ A browser first-person shooter that ships as one static HTML file. No build step
 
 - **Offline:** download `index.html` and open it in a browser. That is all it takes.
 - **Online:** <https://bigbraindevbros.github.io/VANTAGE/> — the same file, served by GitHub Pages.
+- **Language:** the UI defaults to English. Settings → Language switches to 中文.
 
 ## Controls
 
