@@ -65,3 +65,7 @@ Ideas, design direction and playtesting are human; code, tooling and documentati
 ## About this repo
 
 `index.html` is the single-file build output. The source lives outside this repo; this is the distribution build.
+
+---
+
+© 2026 hilbertqiu
