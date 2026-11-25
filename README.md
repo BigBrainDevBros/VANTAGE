@@ -2,7 +2,7 @@
 
 A browser first-person shooter that ships as one static HTML file. No build step, no server, works offline.
 
-- Procedural city with three looks and three sizes (3×3 / 4×4 / 5×5 blocks; 150 / 200 / 250 m on the default preset)
+- A walled 3×3 / 4×4 / 5×5 arena (150 / 200 / 250 m on the default preset) inside an endless procedural city that streams in around the player
 - Up to 100 bots with flow-field pathfinding; endless solo mode
 - SMG, sniper, pistol, katana, grappling hook
 - 1v1 duels and co-op vs bots over LAN or room codes (WebRTC)
@@ -33,7 +33,7 @@ Pick a map and a size on the home screen. "Start game" is endless solo; "Create 
 
 ## What is in it
 
-- **City:** a block grid with 14 m streets, generated at startup — courtyard blocks, towers, a freight yard, a plaza. The grid is 3×3, 4×4 or 5×5, picked on the home screen. Fire escapes lead to the roofs, and bots will climb them to follow you.
+- **City:** a block grid with 14 m streets, generated at startup — courtyard blocks, towers, a freight yard, a plaza. You pick a 3×3, 4×4 or 5×5 walled arena on the home screen; beyond the wall the city continues and streams in around the player (visual only, no collision). Fire escapes lead to the roofs, and bots will climb them to follow you.
 - **Bots:** a 1 m navigation grid plus one flow field (BFS) shared by every bot, so they path around blocks and through alleys instead of sliding along walls. When you stand on a roof, their target becomes that building's fire-escape landing.
 - **Collision, raycasts, hit detection:** all against the axis-aligned boxes created by `addBox`, accelerated with an 8 m spatial hash. Bullets use a 2D DDA plus slab test against those boxes.
 - **Multiplayer:** 1v1 first-to-N, or co-op against bots. LAN through `server.py`, or room codes over WebRTC (PeerJS only exchanges SDP). Client-authoritative, no anti-cheat; play with friends.
