@@ -1,6 +1,6 @@
-# Credits and asset licenses
+# Credits And Asset Licenses
 
-## Sound effects (sfx/)
+## Sound Effects
 
 All from the **TeamForbiddenLLC/warfork-free-soundpacks** `cc0/` folder, **CC0 1.0 (public domain)**:
 free to use, modify and sell, no attribution required. Listed here anyway, out of respect.
@@ -25,9 +25,9 @@ Repository: https://github.com/TeamForbiddenLLC/warfork-free-soundpacks
   their license texts are in the official repository.
 - All other game logic was written for this project.
 
-## 3D models (models/)
+## 3D Models
 
-### First-person guns and soldier: removed (2026-11-25)
+### Removed First-Person Guns And Soldier (2026-11-25)
 
 This folder used to contain **cktang88/3d-fps** `mp5a5.glb`, `vss.glb`, `m1911.glb` and `soldier.glb`.
 That repository has **no LICENSE** (GitHub reports `license: null`, i.e. all rights reserved),
@@ -43,7 +43,7 @@ then set `GLB_ART = true` in `js/main.js`. Update this file and ASSET_REPORT.md 
 
 The grappling hook was always built out of boxes.
 
-### Props (models/props/)
+### Props
 
 All **Kenney** CC0 models (public domain; commercial use, modification and redistribution allowed,
 no attribution required), downloaded as GLB conversions from **Hidencod/tge-assets**:
@@ -61,7 +61,7 @@ no attribution required), downloaded as GLB conversions from **Hidencod/tge-asse
 Conversion repository: https://github.com/Hidencod/tge-assets
 Original author: https://kenney.nl (CC0 1.0)
 
-### Knife (models/knives/)
+### Knife
 
 | File | Name | Source | License |
 |---|---|---|---|
@@ -77,7 +77,7 @@ the environment map baked into `knifeEnv`.
 Props are visual only: collision, pathfinding and hit detection still use the boxes created by `addBox`,
 and everything falls back to boxes if a model fails to load.
 
-## City map (v4, 200 m block city)
+## Procedural City Map
 
 The whole map is **generated in code** (the "大地图：程序化街区城市" section of `js/main.js`).
 There is no external map file: building volumes, streets, the ground texture and the window / curtain-wall /
