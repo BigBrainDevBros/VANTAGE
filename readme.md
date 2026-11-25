@@ -80,6 +80,12 @@ from `window.__errs`. The same block is copied to the clipboard, so you can past
 
 Screenshots help a lot — drag them into the issue box.
 
+## License
+
+VANTAGE original work — game code, procedural maps, canvas textures, UI, AI and netcode — is released
+under the [MIT License](license). Bundled third-party components keep their own licenses; they are listed
+above and attributed in [credits.md](credits.md), and their full texts ship inside `index.html`.
+
 ## Authors
 
 Built by **@hilbertqiu** together with an AI coding assistant.
