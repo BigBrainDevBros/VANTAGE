@@ -1,30 +1,36 @@
 ---
-name: Bug Report
-about: Report a bug or unexpected behavior
-title: "[BUG] "
+name: Bug report
+about: Something in the game is broken, stuck, or looks wrong
+title: "[bug] "
 labels: bug
 ---
 
-## Description Of The Defect
+<!-- Chinese or English, either is fine. The in-game "Report a bug" button (Settings) fills in the block at the bottom. -->
 
-A clear and concise description of what the bug is.
+## What happened / 发生了什么
 
-## Steps To Reproduce
+<!-- One or two sentences: where, what you were doing, what went wrong. -->
 
-1. Open or run '...'
-2. Navigate to '...'
-3. Observe the error behavior.
+## Steps to reproduce / 怎么复现
 
-## Expected Behavior
+1.
+2.
+3.
 
-What you expected to happen.
+## Expected / 期望的结果
 
-## Environment Details
+## Build info / 版本信息
 
-- **Project Version**: [e.g. 1.0.0]
-- **Browser / Runtime**: [e.g. Chrome 130, Python 3.12, macOS 15]
-- **Operating System**: [e.g. macOS 15, Windows 11, Linux]
+```
+version:        <!-- e.g. ?v=209 -->
+map:            <!-- e.g. city · 4×4 · bots 24 -->
+browser:        <!-- e.g. Chrome 142 on macOS 15 -->
+```
 
-## Additional Context
+## Console / 控制台
 
-Add console errors, tracebacks, or reproduction logs here.
+<!-- F12 → Console, paste the red lines; or paste window.__errs. Write "none" if it is empty. -->
+
+## Screenshots / 截图
+
+<!-- Drag an image into this box if the problem is visual. -->

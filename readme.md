@@ -69,6 +69,17 @@ Bundled assets and dependencies carry their own licenses. Original project work 
 
 See [Credits](credits.md) for details. Weapon numbers were tuned for this game; the code is original.
 
+## Bugs And Feedback
+
+Found a bug, a softlock, or something that just looks wrong? Open an issue:
+<https://github.com/BigBrainDevBros/VANTAGE/issues/new?template=bug_report.md>
+
+In the game, **Settings → Report a bug** opens that page and fills in the build info for you:
+version (`?v=209`), map and size, bot count, browser, graphics settings, and the last console errors
+from `window.__errs`. The same block is copied to the clipboard, so you can paste it into a comment.
+
+Screenshots help a lot — drag them into the issue box.
+
 ## Authors
 
 Built by **@hilbertqiu** together with an AI coding assistant.
