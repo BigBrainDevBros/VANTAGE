@@ -10,6 +10,8 @@ All notable changes to VANTAGE are documented here.
 - Added rooftop props on tall buildings: water tanks, AC units and stair penthouses.
 - Added a graphics quality setting with four levels, trading shadow resolution and render scale.
 - Added a time of day option on the main menu, with noon and dusk lighting.
+- Added a subtle screen vignette and baked contact shadows around each block into the ground texture.
+- Added a build version label to the settings panel header.
 - Added streets outside the playable walls: a tiled road texture with lane markings and crosswalks, plus parked cars and street lamps.
 - Added third-person body animations: jumping, landing, hit reactions, reload and inspect poses, and head tracking, plus a landing dust burst.
 - Added an in-game "Report a bug" button that prefills the issue form with build information.
@@ -22,6 +24,8 @@ All notable changes to VANTAGE are documented here.
 - Brought the distribution documentation and tracked paths into line with the organisation's conventions.
 - Defaults keep the previous look: graphics quality Medium and lighting Noon.
 - The training panel's ESP overlay is now off by default; it can be switched on with the right Shift panel.
+- Viewmodel materials use Phong shading with a slightly lifted base colour, textures use 16x anisotropy,
+  and the sky gradient is dithered to remove banding.
 
 ### Fixed
 
