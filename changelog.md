@@ -34,3 +34,4 @@ All notable changes to VANTAGE are documented here.
 - Pointer lock failures in iframes and unfocused windows no longer surface as console errors.
 - The render scale follows the active graphics quality when the window moves to a display with a different pixel ratio.
 - The far horizon no longer shows a seam where the ground plane ended.
+- Brighten the night menu backdrop so the city is visible behind the menu.

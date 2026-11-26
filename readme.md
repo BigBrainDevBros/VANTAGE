@@ -18,6 +18,9 @@
 - Up to 100 bots with flow-field pathfinding; endless solo mode
 - SMG, sniper, pistol, katana, grappling hook
 - 1v1 duels and co-op vs bots over LAN or room codes (WebRTC)
+- Time of day: noon, dusk or night. At night the street lamps light pools on the road and some windows are lit
+- Graphics quality setting (off / low / medium / high) trading shadow resolution and render scale for frame rate
+- Street detail: lamps, traffic lights, parked cars, benches, bins and hydrants; water tanks, AC units and stair penthouses on the roofs
 - MIT / CC0 assets only, no unlicensed models
 
 ![VANTAGE](screenshot.jpg)
