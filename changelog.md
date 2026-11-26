@@ -11,6 +11,8 @@ All notable changes to VANTAGE are documented here.
 - Added a graphics quality setting with four levels, trading shadow resolution and render scale.
 - Added a time of day option on the main menu, with noon and dusk lighting.
 - Added a subtle screen vignette and baked contact shadows around each block into the ground texture.
+- Added a night lighting mode on the main menu: moonlit sky, warm pools under the street lamps,
+  and a share of the windows lit up.
 - Added a build version label to the settings panel header.
 - Added streets outside the playable walls: a tiled road texture with lane markings and crosswalks, plus parked cars and street lamps.
 - Added third-person body animations: jumping, landing, hit reactions, reload and inspect poses, and head tracking, plus a landing dust burst.
