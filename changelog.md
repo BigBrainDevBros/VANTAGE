@@ -21,3 +21,10 @@ All notable changes to VANTAGE are documented here.
 
 - Brought the distribution documentation and tracked paths into line with the organisation's conventions.
 - Defaults keep the previous look: graphics quality Medium and lighting Noon.
+- The training panel's ESP overlay is now off by default; it can be switched on with the right Shift panel.
+
+### Fixed
+
+- Pointer lock failures in iframes and unfocused windows no longer surface as console errors.
+- The render scale follows the active graphics quality when the window moves to a display with a different pixel ratio.
+- The far horizon no longer shows a seam where the ground plane ended.
