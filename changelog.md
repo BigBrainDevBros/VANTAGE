@@ -4,9 +4,15 @@ All notable changes to VANTAGE are documented here.
 
 ## [Unreleased]
 
-- Published linked contributor guides in English and Simplified Chinese.
+### Added
 
+- Published linked contributor guides in English and Simplified Chinese.
 - Added a Simplified Chinese project guide and bilingual feedback templates.
+
+### Fixed
+
+- Setback towers on tall buildings now have collision. The upper tier had none, so players could
+  walk through it from the roof and bullets and grapple rays passed straight through.
 
 ## [0.2.0] - 2026-11-27
 
