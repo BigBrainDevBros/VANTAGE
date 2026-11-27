@@ -15,6 +15,8 @@ All notable changes to VANTAGE are documented here.
 
 - Setback towers on tall buildings now have collision. The upper tier had none, so players could
   walk through it from the roof and bullets and grapple rays passed straight through.
+- Restarting after a disconnect now reconnects in place and returns to the lobby instead of reloading
+  the page.
 
 ## [0.2.0] - 2026-11-27
 
