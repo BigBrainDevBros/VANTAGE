@@ -8,6 +8,8 @@ All notable changes to VANTAGE are documented here.
 
 - Published linked contributor guides in English and Simplified Chinese.
 - Added a Simplified Chinese project guide and bilingual feedback templates.
+- Added an in-place rematch: the end screen's restart button resets the round without reloading the
+  page, and online matches reset on both sides together.
 
 ### Fixed
 
