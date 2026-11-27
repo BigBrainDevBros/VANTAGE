@@ -1,6 +1,6 @@
 # VANTAGE
 
-[English](readme.md)
+[English](readme.md) · [贡献指南](contributing.zh-cn.md)
 
 VANTAGE 是一款单 HTML 文件的浏览器第一人称射击游戏。玩家在程序生成的城市中单人游玩、与好友对决或合作对抗电脑。
 

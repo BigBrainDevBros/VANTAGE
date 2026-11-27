@@ -4,6 +4,8 @@ All notable changes to VANTAGE are documented here.
 
 ## [Unreleased]
 
+- Published linked contributor guides in English and Simplified Chinese.
+
 - Added a Simplified Chinese project guide and bilingual feedback templates.
 
 ## [0.2.0] - 2026-11-27
