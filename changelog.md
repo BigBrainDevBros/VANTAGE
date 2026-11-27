@@ -2,7 +2,7 @@
 
 All notable changes to VANTAGE are documented here.
 
-## [Unreleased]
+## [0.2.0] - 2026-11-27
 
 ### Added
 
@@ -13,7 +13,10 @@ All notable changes to VANTAGE are documented here.
 - Added a subtle screen vignette and baked contact shadows around each block into the ground texture.
 - Added a night lighting mode on the main menu: moonlit sky, warm pools under the street lamps,
   and a share of the windows lit up.
-- Added a build version label to the settings panel header.
+- Added a build version label to the settings panel header and a version badge to the HUD; both read one
+  semantic version constant that is kept in step with this changelog.
+- Added a heartbeat watchdog to online matches: when a peer stops answering, the match ends cleanly and
+  their model is removed instead of freezing in place.
 - Added streets outside the playable walls: a tiled road texture with lane markings and crosswalks, plus parked cars and street lamps.
 - Added third-person body animations: jumping, landing, hit reactions, reload and inspect poses, and head tracking, plus a landing dust burst.
 - Added an in-game "Report a bug" button that prefills the issue form with build information.
@@ -28,6 +31,7 @@ All notable changes to VANTAGE are documented here.
 - The training panel's ESP overlay is now off by default; it can be switched on with the right Shift panel.
 - Viewmodel materials use Phong shading with a slightly lifted base colour, textures use 16x anisotropy,
   and the sky gradient is dithered to remove banding.
+- Keyboard focus is now visible in menus and panels.
 
 ### Fixed
 
@@ -35,3 +39,5 @@ All notable changes to VANTAGE are documented here.
 - The render scale follows the active graphics quality when the window moves to a display with a different pixel ratio.
 - The far horizon no longer shows a seam where the ground plane ended.
 - Brighten the night menu backdrop so the city is visible behind the menu.
+- Losing the connection now ends a match as "Connection lost" instead of "Defeat", and the opponent's
+  model is removed right away.
