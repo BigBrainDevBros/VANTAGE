@@ -8,7 +8,7 @@
 ![Build](https://img.shields.io/badge/Build-Single%20HTML-informational?style=flat-square)
 ![Languages](https://img.shields.io/badge/Languages-English%20%2F%20Chinese-informational?style=flat-square)
 
-[Play Online](https://bigbraindevbros.github.io/VANTAGE/) · [Changelog](changelog.md) · [Security Policy](security.md) · [License Notices](license) · [Credits](credits.md)
+[简体中文](readme.zh-cn.md) · [Play Online](https://bigbraindevbros.github.io/VANTAGE/) · [Changelog](changelog.md) · [Security Policy](security.md) · [License Notices](license) · [Credits](credits.md)
 
 </div>
 
